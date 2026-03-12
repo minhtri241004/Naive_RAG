@@ -24,3 +24,31 @@ An intelligent shopping assistant pipeline built with **Retrieval-Augmented Gene
  ┣ 📜 .env                     # Environment variables (API Keys) - NOT tracked by git
  ┣ 📜 .gitignore               # Git ignore rules
  ┗ 📜 README.md                # Project documentation
+```
+## 💡 Usage
+
+Step 1: Build the Vector Index
+Run the indexing script to process the dataset, generate embeddings, and save the FAISS index.
+python build_index.py
+
+Step 2: Test Retrieval (Optional)
+You can test the similarity search directly without invoking the LLM to verify the embedding quality.
+python query.py
+
+Step 3: Run the Full RAG Pipeline
+Interact with the shopping assistant. The system will retrieve the top 3 most relevant products and use Gemini to formulate the answer.
+python rag_pipeline.py
+
+📝 Example Output
+Enter your question: Recommend a blue cotton shirt for summer.
+
+Generating answer...
+
+Answer:
+1. MekongBasics Blue Shirt - Cotton - $73.8
+   This blue cotton shirt is designed for everyday comfort, making it a great choice for summer.
+
+## 👨‍💻 Author
+Ngô Phan Minh Trí
+- Computer Science Major
+- Passionate about AI, LLMs, and Data Science.
